@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Task 2</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <h1>Conditional Rendering</h1>
+
+    <!--V If and V Else-->
+    <div id="currentMinute">
+        <div v-if="isEven">
+            Current minute is even
+        </div> 
+        <div v-else>
+            Current minute is odd
+        </div>
+    </div>
+
+    <hr>
+
+    <!--V If, V Else If and V Else-->
+    <div id="currentDay">
+        <div v-if="day === 'Monday'">
+            Today is Monday
+        </div>
+        <div v-else-if="day === 'Tuesday'">
+            Today is Tuesday
+        </div>
+        <div v-else-if="day === 'Wednesday'">
+            Today is Wednesday
+        </div>
+        <div v-else-if="day === 'Thursday'">
+            Today is Thursday
+        </div>
+        <div v-else-if="day === 'Friday'">
+            Today is Friday
+        </div>
+        <div v-else-if="day === 'Saturday'">
+            Today is Saturday
+        </div>
+        <div v-else>
+            Today is Sunday
+        </div>
+    </div>
+
+    <hr>
+
+    <!--Show Hide-->
+    <div id="showHide">
+        <h3 v-show="show">
+            Not Hidden!
+        </h3>
+        <button @click="changeBoolean">{{ show ? 'Hide' : 'Show' }}</button>
+    </div>
+
+    <hr>
+
+    <!--V For-->
+    <ul id="listRendering">
+        <li v-for="fruit in fruits">
+            {{ fruit.name }}
+        </li>
+    </ul>
+    
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="script.js"></script>
+</html>

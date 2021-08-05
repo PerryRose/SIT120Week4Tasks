@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Task 1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Declarative Rendering</h1>
+
+    <hr>
+
+    <div id="countdown">
+        <b>Countdown then alert:</b> {{ countdown }}
+    </div>      
+
+    <hr>
+
+    <div id="html">
+        <span v-html="rawHTML"></span>
+        <b>RawHTML object as plaintext:</b> {{ rawHTML }}
+    </div>
+
+    <br><hr>
+
+    <div id="dynamicClass">
+        <h3 v-bind:class="dynamicClass">I am blue if the current minute is even, 
+            otherwise I'm green when it's odd.</h3>
+    </div>
+
+    <hr>
+      
+      
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="script.js"></script>
+</html>
